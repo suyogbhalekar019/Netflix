@@ -67,7 +67,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/gauri17-pro/nextflix.git'
+                git branch: 'main', url: 'https://github.com/suyogbhalekar019/nextflix.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -113,8 +113,8 @@ pipeline {
             steps{
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){   
-                    sh "docker tag netflix gauris17/netflix:latest "
-                    sh "docker push gauris17/netflix:latest"
+                    sh "docker tag netflix suyogbhalekar19/netflix:latest "
+                    sh "docker push suyogbhalekar19/netflix:latest"
                     }
                 }
             }
