@@ -6,7 +6,7 @@ WORKDIR /data
 COPY . .
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
-ARG API_KEY
+ARG API_KEY   ff77c0c06c70c43d19961849a299c67c
 ENV TMDB_KEY=${API_KEY}
 
 RUN npm install
